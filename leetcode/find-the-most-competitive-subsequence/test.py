@@ -16,9 +16,12 @@ class TestMostCompetitive(unittest.TestCase):
         nums = [10**9 for i in range(10**5)]
         k = 50000
         self.assertEqual(sol.mostCompetitive(nums, k), nums[:k])
-##        nums = [10**9 for i in range(10**5)] + [1]
-##        k = 50000
-##        self.assertEqual(sol.mostCompetitive(nums, k), nums[:k - 1] + [1])
+        nums = [10**9 for i in range(10**5)] + [1]
+        k = 50000
+        self.assertEqual(sol.mostCompetitive(nums, k), nums[:k - 1] + [1])
+        nums = [i for i in range(10**5)]
+        k = 50000
+        self.assertEqual(sol.mostCompetitive(nums, k), nums[:k])
 
 if __name__ == '__main__':
     unittest.main()
